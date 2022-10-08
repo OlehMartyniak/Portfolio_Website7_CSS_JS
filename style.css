@@ -21,16 +21,16 @@ h2 {
 h3 {
     font-size: 26px;
 }
-header {
+.header {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 20;
 }
 header ul {
     padding-left: 0;
@@ -46,6 +46,13 @@ header ul li a {
     text-transform: uppercase;
 }
 .logo {
+    text-transform: uppercase;
+    font-family: "Poppins";
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+.logo2 {
     text-transform: uppercase;
     font-family: "Poppins";
     font-size: 23px;
@@ -283,6 +290,7 @@ header ul li a {
     align-items : center;
     justify-content: center;
     width: 23%;
+    min-width: 200px;
     min-height: 270px;
     border: 1px solid #fff;
     margin-bottom: 40px;
@@ -360,4 +368,88 @@ footer .icons {
 }
 .copyright p {
     font-size: 14px;
+}
+
+@media (min-width: 900px) {
+    .menu-btn {
+        display: none;
+    }
+    .close-btn {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .header {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        padding: 0;
+        height: 100vh;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        transition: 1s ease;
+        transition-property: right;
+    }
+    .header.active {
+        right: 0;
+        transition: 1s ease;
+    }
+    header ul li {
+        display: block;
+        margin: 0;
+        margin-top: 30px;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .logo {
+        position: absolute;
+        height: 30px;
+        width: 100%;
+        top: 7.7%;
+        left: 16%;
+    }
+    .close-btn {
+        position: absolute;
+        top: 8.5%;
+        left: 5%;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    /* burder menu */
+    .menu-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        z-index: 10;
+        margin: 50px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .container {
+        padding: 0 35px;
+    }
+
+    .sec4-boxes {
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .footer-inner div:nth-child(1) {
+        display: none;
+    }
+    .footer-inner ul li a{
+        font-size: 2rem;
+    }
+    .footer-inner .social ul{
+        display: flex;
+        gap: 25px;
+    }   
 }
