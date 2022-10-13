@@ -1,11 +1,25 @@
-
-
 // Slick - carousel slider
 $('.sec3-slider').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 2,
-    speed: 1500
+    speed: 1500,
+    responsive: [
+        {
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    },
+    {
+        breakpoint: 720,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }
+    ]
 });
 
 
